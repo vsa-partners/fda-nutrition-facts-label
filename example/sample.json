@@ -1,0 +1,64 @@
+{
+  "servings_per_container": {
+    "value": 8
+  },
+  "serving_size": {
+    "value": "2/3 cup (55g)"
+  },
+  "calories": {
+    "value": 230
+  },
+  "total_fat": {
+    "value": 8
+  },
+  "saturated_fat": {
+    "value": 1
+  },
+  "trans_fat": {
+    "value": 0
+  },
+  "cholesterol": {
+    "value": 0
+  },
+  "sodium": {
+    "value": 160
+  },
+  "total_carbs": {
+    "value": 37
+  },
+  "dietary_fiber": {
+    "value": 4
+  },
+  "total_sugars": {
+    "value": 12
+  },
+  "added_sugars": {
+    "value": 10
+  },
+  "protein": {
+    "value": 3
+  },
+  "vitamin_d": {
+    "value": 2
+  },
+  "calcium": {
+    "value": 260
+  },
+  "iron": {
+    "value": 8
+  },
+  "potassium": {
+    "value": 235
+  },
+  "calories_per_gram": {
+    "fat": {
+      "value": 9
+    },
+    "carbs": {
+      "value": 4
+    },
+    "protein": {
+      "value": 4
+    }
+  }
+}

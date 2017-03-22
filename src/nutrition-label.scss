@@ -1,0 +1,157 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
+body {
+  background-color: #ccc;
+	padding: 10px;
+	.fda-nutrition-label {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.fda-nutrition-label {
+  background: white;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: $browser-context;
+	line-height: 1em;
+	border: 2px solid black;
+	padding: 5px;
+	width: 300px;
+
+	b {
+		font-family: "Arial Black", Arial, sans-serif;
+		font-weight: 800;
+	}
+}
+
+.fda-nutrition-label--row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  line-height: 1.4em;
+  &.indent {
+    padding-left: 1em;
+  }
+  &.indent-2 {
+    margin-left: 2em;
+  }
+}
+
+.fda-nutrition-label--section {
+	line-height: 0.9em;
+	& + .fda-nutrition-label--section {
+		margin-top: 4px;
+	}
+
+	&.title {
+		font-size: em(36);
+		white-space: nowrap;
+		letter-spacing: -0.02em;
+		padding-bottom: 2px;
+		border-bottom: 2px solid black;
+	}
+
+	&.servings {
+		font-size: em(18);
+		padding-bottom: 4px;
+		border-bottom: 15px solid black;
+	}
+
+	&.calories, &.daily-value-b {
+		border-bottom: 7px solid black;
+	}
+
+	&.calories {
+		padding-bottom: 6px;
+		.fda-nutrition-label--row {
+			font-size: 32px;
+			line-height: 0.9em;
+			div:last-child {
+				font-size: em(40, 32);
+			}
+		}
+	}
+
+	&.daily-value-a {
+		border-bottom: 15px solid black;
+		.fda-nutrition-label--row {
+			font-size: em(15);
+			border-top: 2px solid black;
+			&.indent, &.indent-2 {
+				border-top: 1px solid black;
+			}
+			&:first-of-type {
+				border-top: none;
+			}
+		}
+	}
+
+	&.daily-value-b {
+		.fda-nutrition-label--row {
+			font-size: em(15);
+			border-bottom: 1px solid black;
+			&:first-of-type {
+				border-bottom: 2px solid black;
+			}
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}
+
+	&.disclaimer {
+		position: relative;
+		font-size: em(12);
+		padding-left: 0.6em;
+		line-height: 1.2em;
+		&:before {
+			content: "*";
+			position: absolute;
+			top: 0;
+			left: 0em;
+		}
+
+    .calories-per-gram {
+      border-top: 1px solid black;
+      margin-top: 4px;
+      padding-top: 4px;
+      & > span {
+        display: block;
+        text-align: center;
+      }
+
+      ul {
+        display: inline-block;
+        padding: 2px 0 0;
+        margin: 0 auto;
+        list-style: none;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        li {
+          float: left;
+          position: relative;
+          & + li {
+            padding-left: 2em;
+            &:before {
+              content: "•";
+              position: absolute;
+              left: 1em;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+	}
+}
