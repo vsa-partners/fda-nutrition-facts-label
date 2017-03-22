@@ -1,0 +1,24 @@
+{
+  "name": "fda-nutrition-facts-label",
+  "description": "FDA nutritional label with 2018 specs.",
+  "main": "dist/nutrition-label.js",
+  "authors": [
+    "Corey Roach <caroach@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "nutrition",
+    "label",
+    "javascript",
+    "fda",
+    "sass"
+  ],
+  "homepage": "https://github.com/vsa-partners/fda-nutrition-facts-label",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
