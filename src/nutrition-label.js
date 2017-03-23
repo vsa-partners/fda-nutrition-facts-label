@@ -240,12 +240,12 @@ require('./nutrition-label.scss');
 			}).map((item) => _.buildRow(item, true)), 'daily-value-a');
 
 			_.appendToSection([
+				data.vitamin_a,
+				data.vitamin_c,
 				data.vitamin_d,
 				data.calcium,
 				data.iron,
 				data.potassium,
-				data.vitamin_a,
-				data.vitamin_c,
 			].filter((item) => {
 				return item.value !== false;
 			}).map((item) => _.buildRow(item)), 'daily-value-b');
